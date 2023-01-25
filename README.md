@@ -18,5 +18,13 @@ Udemy discord community 에서 2월 28일까지 완강 챌린지 이벤트를 �
 `GitHub Project`에 기록된 내용들과 각 `Issue`마다 기록한 `commit`, `comment`를 바탕으로 가볍게 리마인드 할 계획이다.<br>
 <br>
 기타 다른 곳에서 관련된 내용들을 학습하게 될 경우, 생각이 날 때 `README.md` 하단에 날짜와 함께 관련 내용들을 기록하게 될 것 같다.
+
+## Branch Management Strategy
+`Git Flow`에 기반한 브랜치 관리 전략을 적용해보았다.<br>
+먼저 전반적인 실습 과정은 `develop branch`를 기본으로 한다.<br>
+각 `Section`마다 `develop branch`를 기반으로 생성된 `feature branch`를 생성하여 실습을 진행한다.<br>
+해당 `Section`의 실습이 모두 완료되는 경우 `develop branch`에 `PR`을 통해 `merge`한다.<br>
+모든 실습이 완료된 경우 `develop branch`를 `main branch`에 `PR`을 통해 `merge`하고 종료한다.<br> 
+
 ## Related Section
 - 
