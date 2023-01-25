@@ -6,14 +6,14 @@ import './App.css';
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
-    { id: 'g1', text: 'Do all exercises!' },
-    { id: 'g2', text: 'Finish the course!' }
+    { text: 'Do all exercises!', id: 'g1' },
+    { text: 'Finish the course!', id: 'g2' }
   ]);
 
   const addGoalHandler = enteredText => {
     setCourseGoals(prevGoals => {
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ id: Math.random().toString(), text: enteredText });
+      updatedGoals.unshift({ text: enteredText, id: 'goal1' });
       return updatedGoals;
     });
   };
@@ -36,21 +36,14 @@ const App = () => {
   }
 
   return (
-    <div>
+
       <section id="goal-form">
         <CourseInput onAddGoal={addGoalHandler} />
       </section>
       <section id="goals">
         {content}
-        {/* {courseGoals.length > 0 && (
-          <CourseGoalList
-            items={courseGoals}
-            onDeleteItem={deleteItemHandler}
-          />
-        ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
-        } */}
       </section>
-    </div>
+
   );
 };
 
